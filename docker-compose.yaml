@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  api:
+    build:
+      context: ./
+      target: dev
+    image: test_macos_reload
+    volumes:
+      - .:/api/app
+      # more details here: https://burnedikt.com/dockerized-node-development-and-mounting-node-volumes/
+      - notused:/api/app/node_modules
+    command: yarn start
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+
+volumes:
+  notused:
