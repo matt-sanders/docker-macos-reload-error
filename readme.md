@@ -1,0 +1,1 @@
+TSX does not pick up file changes when using in Docker on a Mac with Apple Silicon ( M2 in specific ). Nodemon works as expected. Change the command in `docker-compose` to `npm start` to see the difference.

@@ -9,7 +9,8 @@ services:
       - .:/api/app
       # more details here: https://burnedikt.com/dockerized-node-development-and-mounting-node-volumes/
       - notused:/api/app/node_modules
-    command: yarn start
+    # command: yarn start
+    command: yarn start:ts-node
     ports:
       - "3000:3000"
     environment:
