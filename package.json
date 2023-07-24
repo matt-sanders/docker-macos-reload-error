@@ -1,12 +1,16 @@
 {
   "scripts": {
     "start": "tsx watch server.ts",
-    "start:ts-node": "nodemon server.ts"
+    "start:ts-node": "nodemon server.ts",
+    "start:chokidar": "ts-node chock-test.ts"
   },
   "devDependencies": {
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3"
   }
 }
